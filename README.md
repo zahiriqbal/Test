@@ -7,9 +7,9 @@ Git clone project
 
 Switch to the directory folder and run the two command below:
 
--npm i
+npm i
 
--gulp
+gulp
 
 Now open ‘index.html’ file from terminal using this command:
 
@@ -21,7 +21,7 @@ ____
 
 To run the test in terminal use this command below:
 
--gulp test
+gulp test
 
 To break the test go to : gulpfile.js
 FIND: gulp.task('test', ['sass', 'copy:icons', 'copy:govuk_template_mustache']);
