@@ -1,0 +1,22 @@
+var emp = [{
+		"First_name" : "Tom",
+		"Last_name" : "Riddle",
+		"Work_History" : "Hogwarths",
+		"emp_code" : "1"
+	}, {
+		"First_name" : "Maad",
+		"Last_name" : "Hatter",
+		"Work_History" : "Tea Party",
+		"emp_code" : "2"
+	}, {
+		"First_name" : "Max",
+		"Last_name" : "Payne",
+		"Work_History" : "CIA",
+		"emp_code" : "3"
+	}, {
+		"First_name" : "Eathan",
+		"Last_name" : "Jones",
+		"Work_History" : "Mission Impossible",
+		"emp_code" : "4"
+	}
+]

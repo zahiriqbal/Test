@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css" /> -->
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="node_modules/angular-sanitize/angular-sanitize.js"></script>
+<script data-require="ng-table@*" data-semver="0.3.1" src="node_modules/ng-table/ng-table.js"></script>
+<link data-require="ng-table@*" data-semver="0.3.1" rel="stylesheet" href="node_modules/ng-table/ng-table.css" />
+<script src="script.js"></script>
+<script src="EmpData.Json"  type="text/javascript"></script>
+
+
+<link href="public/stylesheets/govuk-template.css?0.18.0" media="screen" rel="stylesheet" />
+
+<link rel="stylesheet" href="public/stylesheets/application.css" />
+
+
+
+</style>
+</head>
+
+<body ng-app="main" ng-controller="AppCtrl">
+  <header role="banner" id="global-header" class="
+    with-proposition">
+        <div class="header-wrapper">
+          <div class="header-global">
+            <div class="header-logo">
+              <a href="" title="Test Project" id="logo" class="content">
+                <img src="public/images/gov.uk_logotype_crown_invert_trans.png" width="35" height="31" alt=""> Test
+              </a>
+            </div>
+
+          </div>
+
+    <div class="header-proposition">
+    <div class="content">
+      <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+      <nav id="proposition-menu">
+        <a href="" id="proposition-name">Test site</a>
+      </nav>
+    </div>
+  </div>
+
+
+        </div>
+      </header>
+
+<div class="container-fluid">
+
+<div class="row">
+
+	<div class="col-sm-12">
+
+		<div ng-show="selected.item === null">
+
+			<div ng-controller="DemoCtrl">
+
+<div align="right">
+           <button ng-click="tableParams.sorting({})" class="button pull-right">Clear sorting</button>
+  		   <button ng-click="tableParams.filter({})" class="button pull-right">Clear filter</button>
+
+    </div>
+
+
+				<table ng-table="tableParams" show-filter="true" class="table table-responsive table-striped table-hover">
+					<tr ng-repeat="user in $data">
+
+						<td data-title="'First Name'" sortable="'First_name'" filter="{ 'First_name': 'text' }">
+							{{user.First_name}}
+						</td>
+						<td data-title="'Last Name'" sortable="'Last_name'" filter="{ 'Last_name': 'text' }">
+							{{user.Last_name}}
+						</td>
+						 <td>
+						   <button class="button" ng-click="accept(user)"><strong>Select</strong></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+
+		</div>
+
+
+		<div ng-show="selected.item !== null">
+
+		<div ng-controller="ItemCtrl" align="right">
+		<button class="button" ng-click="goBack()">Go back</button>
+
+			<table width="25%">
+			<tr>
+			<td> <h3><b>Employee Ref Number</b></h3></td>
+			<td><h3><div ng-bind="selected.item.emp_code" /> </h3> </td>
+			</tr>
+			</table>
+
+			<html>
+        <body>
+
+		<table style="width:100%">
+		  <tr>
+        <td><pre><h5><b>First Name</b><div ng-bind="selected.item.First_name" /></h5></pre></td>
+  			<td><pre><h5><b>Last Name</b><div ng-bind="selected.item.Last_name" /></h5></pre></td>
+		  </tr>
+
+		</table>
+
+		</body>
+		</html>
+
+<br />
+
+
+<table class="table table-responsive table-striped table-hover">
+ <thead>
+  <tr>
+  <th><b>Work History</b></th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+
+  <td>
+
+  <div ng-bind-html="selected.item.Work_History" />
+  </td>
+
+
+  </tr>
+  </tbody>
+  </table>
+
+		</div>
+
+	</div>
+
+</div>
+
+</div>
+</body>
+</html>
