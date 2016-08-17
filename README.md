@@ -8,6 +8,7 @@ Git clone project
 Switch to the directory folder and run the two command below:
 
 -npm i
+
 -gulp
 
 Now open ‘index.html’ file from terminal using this command:
